@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherOf Kakkanad</title>
+    <link rel="icon" type="image/x-icon" href="./Images/weather-favicon.png">
+
+    <!-- bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+
+    <!-- google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- Background Decoration -->
+
+    <div class="background-decoration">
+        <div class="cloud cloud-left"></div>
+        <div class="cloud cloud-right"></div>
+
+        <div class="mountains"></div>
+
+        <div class="bottom-decoration left-decoration">
+            🌿
+        </div>
+
+        <div class="bottom-decoration right-decoration">
+            🌿
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="header-container">
+
+            <!-- Logo -->
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <i class="bi bi-cloud-sun-fill"></i>
+                </div>
+
+                <span>WeatherOf <span class="logo-blue">Kakkanad</span></span>
+            </a>
+
+            <!-- Navigation -->
+            <nav class="navigation">
+                <a href="#" class="nav-link active">Today</a>
+                <a href="#" class="nav-link">About</a>
+            </nav>
+
+            <!-- Search -->
+            <form class="search-form">
+
+                <i class="bi bi-search search-icon"></i>
+
+                <input class="" type="text" placeholder="Search city..." aria-label="Search city">
+
+                <button type="submit" aria-label="Search">
+                    <i class="bi bi-search"></i>
+                </button>
+
+            </form>
+
+        </div>
+
+    </header>
+
+    <!-- Main -->
+
+    <main class="main-container">
+        <section class="weather-card">
+            <div class="weather-detail">
+
+                <div class="location">
+                    <i class="bi bi-geo-alt-fill location-icon"></i>
+
+                    <div>
+                        <h2 id="cityname"></h2>
+                        <div class="date-time">
+                            <p id="date" class="date mx-2"></p>
+                                
+                                <span>•</span>
+                            <p id="time" class="mx-2">08:42 AM </p>
+
+                            
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div id="temperature" class="temperature">
+                    <span></span>
+                </div>
+
+                <h3 id="weather-description" class="weather-description">Partly cloudy</h3>
+
+                <p id="feels-like" class="feels-like"></p>
+
+            </div>
+        </section>
+
+        <section class="weather-stats">
+
+            <!-- Humidity -->
+            <article class="stat-card">
+
+                <div class="stat-icon">
+                    <i class="bi bi-droplet-fill"></i>
+                </div>
+
+                <div class="stat-info">
+                    <p>Humidity</p>
+                    <h3 id="humidity"></h3>
+                </div>
+
+            </article>
+            <!-- WIND -->
+            <article class="stat-card">
+
+                <div class="stat-icon">
+                    <i class="bi bi-wind"></i>
+                </div>
+
+                <div class="stat-info">
+                    <p>Wind</p>
+                    <h3 id="wind"></h3>
+                </div>
+
+            </article>
+            <!-- PRESSURE -->
+            <article class="stat-card">
+
+                <div class="stat-icon">
+                    <i class="bi bi-speedometer2"></i>
+                </div>
+
+                <div class="stat-info">
+                    <p>Pressure</p>
+                    <h3 id="pressure"></h3>
+                </div>
+
+            </article>
+            <!-- VISIBILITY -->
+            <article class="stat-card">
+
+                <div class="stat-icon">
+                    <i class="bi bi-eye"></i>
+                </div>
+
+                <div class="stat-info">
+                    <p>Visibility</p>
+                    <h3 id="visibility"></h3>
+                </div>
+
+            </article>
+        </section>
+
+        <section class="weather-details">
+
+            <h2>Weather Details</h2>
+            <div class="detail-container">
+                <article class="detail-item">
+
+                    <div class="detail-icon">
+                        <i class="bi bi-thermometer"></i>
+                    </div>
+
+                    <div class="detail-info">
+                        <p>Temperature Range</p>
+                        <h3 id="temp-range"></h3>
+                    </div>
+
+                </article>
+
+                <article class="detail-item">
+
+                    <div class="detail-icon">
+                        <i class="bi bi-cloud-fill"></i>
+                    </div>
+
+                    <div class="detail-info">
+                        <p>Cloud Cover</p>
+                        <h3 id="cloud-cover"></h3>
+                    </div>
+
+                </article>
+            </div>
+
+        </section>
+
+
+
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
